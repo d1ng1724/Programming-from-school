@@ -1,25 +1,26 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-int steak_for1() {
+int stack_for1() {
 	int n, sum=0;
-	scanf_s("%d", &n);
+	scanf("%d", &n);
 	for (int i = 1; i <= n; i++) {
 		if (i / 2 == 1)
 			sum+=n;
 	}
 	printf("%d", sum);
 }
-int steak_for2() {
+int stack_for2() {
 	int n, f=1;
-	scanf_s("%d", &n);
+	scanf("%d", &n);
 	for (int i =1; i <= n; i++) {
 		f*=i;
 	}
 	printf("%d", f);
 }
-int steak_for3() {
+int stack_for3() {
 	int a, b;
-	scanf_s("%d %d", &a, &b);
+	scanf("%d %d", &a, &b);
 	for (int i = a; i <= b; i++) {
 		if (i % 3 == 0)
 			printf("%d ", i);
@@ -32,14 +33,14 @@ int steak_for4() {
 		printf("\n");
 	}
 }
-int steak_for5() {
+int stack_for5() {
 	for (int i = 5; i > 0; i--) {
 		for (int j=0; j < i; j++)
 			printf("*");
 		printf("\n");
 	}
 }
-int steak_for6() {
+int stack_for6() {
 	int count=1;
 	for (int i = 1; i <= 5; i++) {
 		for (int j = 0; j < i; j++) {
@@ -49,7 +50,7 @@ int steak_for6() {
 		printf("\n");
 	}
 }
-int steak_for7() {
+int stack_for7() {
 	int count = 15;
 	for (int i = 1; i <= 5; i++) {
 		for (int j = 0; j < i; j++) {
@@ -59,7 +60,7 @@ int steak_for7() {
 		printf("\n");
 	}
 }
-int steak_for8() {
+int stack_for8() {
 	for (int i = 0; i < 5; i++) {
 		for (int j = 0; j < 4 - i; j++)
 			printf(" ");
@@ -68,6 +69,26 @@ int steak_for8() {
 			printf("\n");
 	}
 }
+void stack_for9() {
+	int a;
+	char b = 65;
+	scanf("%d", &a);
+	for (int i = 0; i < a; i++) {
+		for (int j = 0; j <= i; j++) {
+			printf("%c ", b);
+			b++;
+		}
+		printf("\n");
+	}
+}
+void stack_for10() {
+	for (int i = 1; i < 10; i++) {
+		for (int j = 1; j < 10; j++) {
+			printf("%d * %d = %2d | ", j, i, i * j);
+		}
+		printf("\n");
+	}
+}
 int main() {
-	steak_for8();
+	stack_for10();
 }
