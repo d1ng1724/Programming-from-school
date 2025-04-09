@@ -82,9 +82,9 @@ void q7() {
 	printf("UP % DOWN GAME (0~99)\n");
 	while (1) {
 		printf("답 입력 : "); scanf("%d", &ans);
-		if (ans > tans)
+		if (tans > ans)
 			printf("UP\n");
-		else if (tans < ans)
+		else if (ans > tans)
 			printf("DOWN\n");
 		else {
 			printf("정답! YOU WIN!\n");
