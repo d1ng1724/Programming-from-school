@@ -41,8 +41,9 @@ int stack_for5() {
 	}
 }
 int stack_for6() {
-	int count=1;
-	for (int i = 1; i <= 5; i++) {
+	int count=1, n;
+	scanf("%d", &n);
+	for (int i = 1; i <= n; i++) {
 		for (int j = 0; j < i; j++) {
 			printf("%2d ", count);
 			count++;
@@ -51,8 +52,14 @@ int stack_for6() {
 	}
 }
 int stack_for7() {
-	int count = 15;
-	for (int i = 1; i <= 5; i++) {
+	int count = 0, n;
+	scanf("%d", &n);
+	for (int i = 1; i <= n; i++) {
+		for (int j = 0; j < i; j++) {
+			count++;
+		}
+	}
+	for (int i = 1; i <= n; i++) {
 		for (int j = 0; j < i; j++) {
 			printf("%2d ", count);
 			count--;
@@ -61,8 +68,10 @@ int stack_for7() {
 	}
 }
 int stack_for8() {
-	for (int i = 0; i < 5; i++) {
-		for (int j = 0; j < 4 - i; j++)
+	int n;
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n - i; j++)
 			printf(" ");
 		for (int k = 0; k < i * 2 + 1; k++)
 			printf("*");
@@ -90,5 +99,5 @@ void stack_for10() {
 	}
 }
 int main() {
-	stack_for10();
+	stack_for9();
 }
